@@ -7,7 +7,7 @@ const makeSoftDeleteWithDependency = require('./deleteDependent').softDeleteWith
 const response = require('../../utils/response');
 
 const softDeleteUser = ({
-  userDb,userTokensDb,userRoleDb
+  userDb,PlanDb,MasterDb,userTokensDb,userRoleDb
 }) => async (params,req = {},res = {}) => {
   let {
     data, query, dataToUpdate 
@@ -16,6 +16,8 @@ const softDeleteUser = ({
   if (data.isWarning) {
     const getDependencyCount = makeGetDependencyCount({
       userDb,
+      PlanDb,
+      MasterDb,
       userTokensDb,
       userRoleDb
     }); //dependency injection
@@ -24,6 +26,8 @@ const softDeleteUser = ({
   } else {
     const softDeleteWithDependency = makeSoftDeleteWithDependency({
       userDb,
+      PlanDb,
+      MasterDb,
       userTokensDb,
       userRoleDb
     }); //dependency injection

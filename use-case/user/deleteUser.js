@@ -7,7 +7,7 @@ const makeGetDependencyCount = require('./deleteDependent').getDependencyCount;
 const makeDeleteWithDependency = require('./deleteDependent').deleteWithDependency;
 const response = require('../../utils/response');
 const deleteUser = ({
-  userDb,userTokensDb,userRoleDb
+  userDb,PlanDb,MasterDb,userTokensDb,userRoleDb
 }) => async (params,req = {},res = {}) => {
   let {
     data, query 
@@ -16,6 +16,8 @@ const deleteUser = ({
   if (data.isWarning) {
     const getDependencyCount = makeGetDependencyCount({
       userDb,
+      PlanDb,
+      MasterDb,
       userTokensDb,
       userRoleDb
     }); //dependency injection
@@ -24,6 +26,8 @@ const deleteUser = ({
   } else {
     const deleteWithDependency = makeDeleteWithDependency({
       userDb,
+      PlanDb,
+      MasterDb,
       userTokensDb,
       userRoleDb
     }); //dependency injection

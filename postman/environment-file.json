@@ -1,5 +1,5 @@
 {
-  "id": "94e03820-7c7a-4f1d-839e-d1fcbdd2f504",
+  "id": "d3212a52-d867-446b-a2e8-72703001196a",
   "name": "zaiynab_s_application_11_environment",
   "values": [
     {
@@ -14,6 +14,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2022-02-01T12:56:49.162Z",
+  "_postman_exported_at": "2022-02-01T13:00:53.863Z",
   "_postman_exported_using": "Postman"
 }

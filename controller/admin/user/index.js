@@ -1,4 +1,6 @@
 const userDb = require('../../../data-access/userDb');
+const PlanDb = require('../../../data-access/PlanDb');
+const MasterDb = require('../../../data-access/MasterDb');
 const userTokensDb = require('../../../data-access/userTokensDb');
 const userRoleDb = require('../../../data-access/userRoleDb');
 
@@ -23,6 +25,8 @@ const getUserCountUsecase = require('../../../use-case/user/getUserCount')({
 const getUserByAggregateUsecase = require('../../../use-case/user/getUserByAggregate')({ userDb });
 const softDeleteManyUserUsecase = require('../../../use-case/user/softDeleteManyUser')({
   userDb,
+  PlanDb,
+  MasterDb,
   userTokensDb,
   userRoleDb
 });
@@ -30,11 +34,15 @@ const bulkInsertUserUsecase = require('../../../use-case/user/bulkInsertUser')({
 const bulkUpdateUserUsecase = require('../../../use-case/user/bulkUpdateUser')({ userDb });
 const deleteManyUserUsecase = require('../../../use-case/user/deleteManyUser')({
   userDb,
+  PlanDb,
+  MasterDb,
   userTokensDb,
   userRoleDb
 });
 const softDeleteUserUsecase = require('../../../use-case/user/softDeleteUser')({
   userDb,
+  PlanDb,
+  MasterDb,
   userTokensDb,
   userRoleDb
 });
@@ -52,6 +60,8 @@ const getUserUsecase = require('../../../use-case/user/getUser')({
 });
 const deleteUserUsecase = require('../../../use-case/user/deleteUser')({
   userDb,
+  PlanDb,
+  MasterDb,
   userTokensDb,
   userRoleDb
 });

@@ -1,6 +1,8 @@
 const express =  require('express');
 const router =  express.Router();
 router.use('/admin/auth',require('./auth'));
+router.use(require('./PlanRoutes'));
+router.use(require('./MasterRoutes'));
 router.use(require('./userRoutes'));
 router.use(require('./roleRoutes'));
 router.use(require('./projectRouteRoutes'));
