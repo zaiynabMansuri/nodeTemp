@@ -13,12 +13,12 @@
 3. Credentials
 	- One user with User role,
 	# Default User credentials
-	**username** : Kenny76
-	**password** : KlC9KP3gF6ywHTN
+	**username** : Linnie39
+	**password** : a1A3BSzkL1RMt2Q
 	- One user with Admin role,
 	# Default Admin credentials
-	**username** : Jamal60
-	**password** : sstZVCiYzAtGSE4
+	**username** : Alanna_Runolfsdottir55
+	**password** : dIlI0hNH7Y3qEAy
 	
 ## How to use generated APIs:
 [Click here to visit documentation](<https://docs.dhiwise.com/knowledgehub/generated-node.js-apis> "API Documentation")
